@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YieldDial: what your dollar earns right now</title>
+  <meta name="description" content="Compare cash yields side by side: US T-bills, money-market funds, Aave and Compound USDC, and exchange USDC rewards, with the risk behind each.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="stale-banner" class="banner" role="alert" hidden></div>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="brand"><span class="dot" aria-hidden="true"></span>YieldDial</p>
+      <h1>What your dollar earns right now</h1>
+      <p class="sub">T-bills, money-market funds, DeFi lending and exchange rewards, side by side, with the risk behind each number.</p>
+      <div class="stats" id="stats" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="table-h">
+      <div class="section-head">
+        <h2 id="table-h">Cash yield board</h2>
+        <div class="chips" id="filters" role="group" aria-label="Filter by type"></div>
+      </div>
+      <div class="table-wrap">
+        <table id="rates">
+          <thead>
+            <tr>
+              <th data-sort="name" scope="col">Option</th>
+              <th data-sort="type" scope="col">Type</th>
+              <th data-sort="apy" scope="col" class="num sorted" aria-sort="descending">Yield (APY)</th>
+              <th data-sort="spread_vs_3m" scope="col" class="num">Spread vs 3-month T-bill</th>
+              <th scope="col">Risk note</th>
+              <th data-sort="last_checked" scope="col">Last checked</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"><tr><td colspan="6" class="loading">Loading rates…</td></tr></tbody>
+        </table>
+      </div>
+      <p class="fineprint">Click a column heading to sort. “Live” rows are fetched automatically. “Manual” rows are looked up by hand from the source page on the date shown. Treasury figures are par yields; money-market funds quote 7-day yields; exchange rates are headline “up to” rates. They are not perfectly like-for-like.</p>
+    </section>
+
+    <section class="curve" aria-labelledby="curve-h">
+      <h2 id="curve-h">US Treasury yield curve</h2>
+      <p class="muted" id="curve-sub"></p>
+      <div id="curve-chart" role="img" aria-label="Line chart of US Treasury yields by maturity"></div>
+    </section>
+
+    <section class="signup" aria-labelledby="nl-h">
+      <h2 id="nl-h">Get the weekly yield note</h2>
+      <p class="muted">One short email: what moved, what changed on Fed days, no hype.</p>
+      <!-- PLACEHOLDER: wire this form to the newsletter provider once the owner has an account. -->
+      <form id="nl-form" action="#" method="post" novalidate>
+        <label class="sr-only" for="nl-email">Email address</label>
+        <input id="nl-email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="muted small" id="nl-msg" role="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><strong>Not financial advice.</strong> YieldDial is information only. Rates change, sometimes daily, and may differ from what you can actually get. Money-market funds, DeFi protocols and exchanges can lose money; a higher yield almost always means more risk. Do your own research.</p>
+      <p><strong>Affiliate disclosure:</strong> <span class="placeholder">[PLACEHOLDER: Some links on this site may be affiliate links. If you sign up through them, YieldDial may earn a commission at no cost to you. This does not change how options are ranked: the table is sorted by yield.]</span></p>
+      <p class="small">Data sources: US Treasury daily par yield curve; Aave v3 official API; Compound v3 contracts read on-chain; money-market and exchange rates entered manually from provider pages. <span id="gen"></span></p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

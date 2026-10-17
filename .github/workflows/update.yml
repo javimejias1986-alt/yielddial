@@ -1,0 +1,71 @@
+name: Update rates
+
+on:
+  schedule:
+    # Treasury: weekdays 22:15 UTC = 18:15 EDT / 17:15 EST, always after 17:00 US Eastern
+    - cron: "15 22 * * 1-5"
+    # DeFi (Aave, Compound): every 2 hours
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Which source to refresh"
+        type: choice
+        options: [all, treasury, defi, manual]
+        default: all
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-rates
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pick source
+        id: pick
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "only=${{ inputs.only }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "15 22 * * 1-5" ]; then
+            echo "only=treasury" >> "$GITHUB_OUTPUT"
+          else
+            echo "only=defi" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Exits non-zero on bad data. Good rows are still written; failed rows keep their
+      # old timestamp so the site's stale banner fires. continue-on-error lets us commit
+      # the good rows, and the final step re-fails the job so the failure is visible.
+      - name: Fetch rates
+        id: fetch
+        continue-on-error: true
+        run: python3 scripts/fetch_rates.py --only "${{ steps.pick.outputs.only }}"
+
+      - name: Commit updated data
+        run: |
+          git config user.name "yielddial-bot"
+          git config user.email "yielddial-bot@users.noreply.github.com"
+          git add data/rates.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "data: update rates (${{ steps.pick.outputs.only }})"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+
+      - name: Fail loudly if the fetch failed
+        if: steps.fetch.outcome == 'failure'
+        run: |
+          echo "::error::fetch_rates.py reported errors, see the 'Fetch rates' step"
+          exit 1
