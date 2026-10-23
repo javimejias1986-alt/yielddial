@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T22:37:18Z",
+  "generated_at": "2026-10-23T00:30:11Z",
   "stale_after_hours": 36,
   "tbill_3m": 4.22,
   "sources": {
@@ -8,13 +8,13 @@
       "as_of": "2026-10-22"
     },
     "aave": {
-      "fetched_at": "2026-10-22T22:24:06Z"
+      "fetched_at": "2026-10-23T00:30:09Z"
     },
     "compound": {
-      "fetched_at": "2026-10-22T22:24:08Z"
+      "fetched_at": "2026-10-23T00:30:11Z"
     },
     "manual": {
-      "fetched_at": "2026-10-22T22:37:18Z"
+      "fetched_at": "2026-10-23T00:30:11Z"
     }
   },
   "curve": {
@@ -56,31 +56,13 @@
   },
   "rows": [
     {
-      "id": "aave-usdc-optimism",
-      "name": "Aave v3 USDC (Optimism)",
-      "type": "DeFi lending",
-      "apy": 4.58,
-      "yield_basis": "Variable supply APY, base rate (excludes incentive rewards)",
-      "as_of": "2026-10-22",
-      "last_checked": "2026-10-22T22:24:06Z",
-      "source_kind": "live",
-      "source_url": "https://app.aave.com/markets/",
-      "risk_tags": [
-        "smart-contract risk",
-        "variable rate"
-      ],
-      "risk_note": "Lending to onchain borrowers via audited smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
-      "affiliate_url": "#",
-      "spread_vs_3m": 0.36
-    },
-    {
       "id": "compound-usdc-ethereum",
       "name": "Compound v3 USDC (Ethereum)",
       "type": "DeFi lending",
-      "apy": 4.44,
-      "yield_basis": "On-chain supply rate (APR 4.35%) shown as APY, daily compounding; excludes COMP rewards",
-      "as_of": "2026-10-22",
-      "last_checked": "2026-10-22T22:24:06Z",
+      "apy": 4.95,
+      "yield_basis": "On-chain supply rate (APR 4.83%) shown as APY, daily compounding; excludes COMP rewards",
+      "as_of": "2026-10-23",
+      "last_checked": "2026-10-23T00:30:09Z",
       "source_kind": "live",
       "source_url": "https://app.compound.finance/markets/usdc-mainnet",
       "risk_tags": [
@@ -89,7 +71,25 @@
       ],
       "risk_note": "Lending to onchain borrowers via Compound v3 smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
-      "spread_vs_3m": 0.22
+      "spread_vs_3m": 0.73
+    },
+    {
+      "id": "aave-usdc-optimism",
+      "name": "Aave v3 USDC (Optimism)",
+      "type": "DeFi lending",
+      "apy": 4.55,
+      "yield_basis": "Variable supply APY, base rate (excludes incentive rewards)",
+      "as_of": "2026-10-23",
+      "last_checked": "2026-10-23T00:30:09Z",
+      "source_kind": "live",
+      "source_url": "https://app.aave.com/markets/",
+      "risk_tags": [
+        "smart-contract risk",
+        "variable rate"
+      ],
+      "risk_note": "Lending to onchain borrowers via audited smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
+      "affiliate_url": "#",
+      "spread_vs_3m": 0.33
     },
     {
       "id": "tsy-1y",
@@ -112,10 +112,10 @@
       "id": "aave-usdc-base",
       "name": "Aave v3 USDC (Base)",
       "type": "DeFi lending",
-      "apy": 4.39,
+      "apy": 4.4,
       "yield_basis": "Variable supply APY, base rate (excludes incentive rewards)",
-      "as_of": "2026-10-22",
-      "last_checked": "2026-10-22T22:24:06Z",
+      "as_of": "2026-10-23",
+      "last_checked": "2026-10-23T00:30:09Z",
       "source_kind": "live",
       "source_url": "https://app.aave.com/markets/",
       "risk_tags": [
@@ -124,7 +124,7 @@
       ],
       "risk_note": "Lending to onchain borrowers via audited smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
-      "spread_vs_3m": 0.17
+      "spread_vs_3m": 0.18
     },
     {
       "id": "tsy-6m",
@@ -201,10 +201,10 @@
       "id": "aave-usdc-ethereum",
       "name": "Aave v3 USDC (Ethereum)",
       "type": "DeFi lending",
-      "apy": 3.98,
+      "apy": 3.87,
       "yield_basis": "Variable supply APY, base rate (excludes incentive rewards)",
-      "as_of": "2026-10-22",
-      "last_checked": "2026-10-22T22:24:06Z",
+      "as_of": "2026-10-23",
+      "last_checked": "2026-10-23T00:30:09Z",
       "source_kind": "live",
       "source_url": "https://app.aave.com/markets/",
       "risk_tags": [
@@ -213,7 +213,7 @@
       ],
       "risk_note": "Lending to onchain borrowers via audited smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.24
+      "spread_vs_3m": -0.35
     },
     {
       "id": "mmf-vmfxx",
@@ -333,10 +333,10 @@
       "id": "compound-usdc-base",
       "name": "Compound v3 USDC (Base)",
       "type": "DeFi lending",
-      "apy": 3.27,
-      "yield_basis": "On-chain supply rate (APR 3.22%) shown as APY, daily compounding; excludes COMP rewards",
-      "as_of": "2026-10-22",
-      "last_checked": "2026-10-22T22:24:06Z",
+      "apy": 3.29,
+      "yield_basis": "On-chain supply rate (APR 3.24%) shown as APY, daily compounding; excludes COMP rewards",
+      "as_of": "2026-10-23",
+      "last_checked": "2026-10-23T00:30:09Z",
       "source_kind": "live",
       "source_url": "https://app.compound.finance/markets/usdc-basemainnet",
       "risk_tags": [
@@ -345,7 +345,7 @@
       ],
       "risk_note": "Lending to onchain borrowers via Compound v3 smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.95
+      "spread_vs_3m": -0.93
     },
     {
       "id": "compound-usdc-arbitrum",
@@ -353,8 +353,8 @@
       "type": "DeFi lending",
       "apy": 3.16,
       "yield_basis": "On-chain supply rate (APR 3.11%) shown as APY, daily compounding; excludes COMP rewards",
-      "as_of": "2026-10-22",
-      "last_checked": "2026-10-22T22:24:06Z",
+      "as_of": "2026-10-23",
+      "last_checked": "2026-10-23T00:30:09Z",
       "source_kind": "live",
       "source_url": "https://app.compound.finance/markets/usdc-arb",
       "risk_tags": [
@@ -369,10 +369,10 @@
       "id": "aave-usdc-arbitrum",
       "name": "Aave v3 USDC (Arbitrum)",
       "type": "DeFi lending",
-      "apy": 2.39,
+      "apy": 2.47,
       "yield_basis": "Variable supply APY, base rate (excludes incentive rewards)",
-      "as_of": "2026-10-22",
-      "last_checked": "2026-10-22T22:24:06Z",
+      "as_of": "2026-10-23",
+      "last_checked": "2026-10-23T00:30:09Z",
       "source_kind": "live",
       "source_url": "https://app.aave.com/markets/",
       "risk_tags": [
@@ -381,7 +381,7 @@
       ],
       "risk_note": "Lending to onchain borrowers via audited smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
-      "spread_vs_3m": -1.83
+      "spread_vs_3m": -1.75
     },
     {
       "id": "cex-kraken-free",
