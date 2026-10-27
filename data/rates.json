@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T20:30:17Z",
+  "generated_at": "2026-10-27T20:47:58Z",
   "stale_after_hours": 36,
   "tbill_3m": 4.22,
   "sources": {
@@ -14,7 +14,7 @@
       "fetched_at": "2026-10-27T20:30:17Z"
     },
     "manual": {
-      "fetched_at": "2026-10-27T20:30:17Z"
+      "fetched_at": "2026-10-27T20:47:58Z"
     }
   },
   "curve": {
@@ -198,6 +198,25 @@
       "spread_vs_3m": -0.22
     },
     {
+      "id": "mmf-vmfxx",
+      "name": "Vanguard Federal Money Market (VMFXX)",
+      "type": "Money-market fund",
+      "apy": 3.86,
+      "yield_basis": "7-day SEC yield",
+      "as_of": "2026-10-26",
+      "last_checked": "2026-10-27",
+      "source_kind": "manual",
+      "source_url": "https://investor.vanguard.com/investment-products/mutual-funds/profile/vmfxx",
+      "source_note": "Read from the data feed behind Vanguard's own VMFXX profile page (investor.vanguard.com/vmf/api/0033/yields, 'SEC 7-Day Average Income Yield Net Of Expenses', daily, as of 10/26/2026).",
+      "risk_tags": [
+        "fund risk",
+        "variable rate"
+      ],
+      "risk_note": "Government money-market fund. Not FDIC-insured and not a bank deposit; yield moves daily with short-term rates.",
+      "affiliate_url": "#",
+      "spread_vs_3m": -0.36
+    },
+    {
       "id": "aave-usdc-base",
       "name": "Aave v3 USDC (Base)",
       "type": "DeFi lending",
@@ -214,25 +233,6 @@
       "risk_note": "Lending to onchain borrowers via audited smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
       "spread_vs_3m": -0.4
-    },
-    {
-      "id": "mmf-vmfxx",
-      "name": "Vanguard Federal Money Market (VMFXX)",
-      "type": "Money-market fund",
-      "apy": 3.81,
-      "yield_basis": "7-day SEC yield",
-      "as_of": "2026-10-15",
-      "last_checked": "2026-10-16",
-      "source_kind": "manual",
-      "source_url": "https://investor.vanguard.com/investment-products/mutual-funds/profile/vmfxx",
-      "source_note": "Figure read via public aggregators (YieldFinder, BrinkerAdvisor) quoting Vanguard; Vanguard's own page is JavaScript-rendered and was not machine-read. Re-verify on Vanguard.",
-      "risk_tags": [
-        "fund risk",
-        "variable rate"
-      ],
-      "risk_note": "Government money-market fund. Not FDIC-insured and not a bank deposit; yield moves daily with short-term rates.",
-      "affiliate_url": "#",
-      "spread_vs_3m": -0.41
     },
     {
       "id": "cex-coinbase-one",
@@ -254,6 +254,25 @@
       "spread_vs_3m": -0.47
     },
     {
+      "id": "mmf-swvxx",
+      "name": "Schwab Prime Advantage Money Fund (SWVXX)",
+      "type": "Money-market fund",
+      "apy": 3.74,
+      "yield_basis": "7-day yield (with waivers)",
+      "as_of": "2026-10-26",
+      "last_checked": "2026-10-27",
+      "source_kind": "manual",
+      "source_url": "https://www.schwabassetmanagement.com/products/swvxx",
+      "source_note": "Read from Schwab Asset Management fund page (as of 10/26/2026; 3.73% without waivers).",
+      "risk_tags": [
+        "fund risk",
+        "variable rate"
+      ],
+      "risk_note": "Prime money-market fund: holds some corporate paper, so slightly more credit risk than a government fund. Not FDIC-insured.",
+      "affiliate_url": "#",
+      "spread_vs_3m": -0.48
+    },
+    {
       "id": "compound-usdc-base",
       "name": "Compound v3 USDC (Base)",
       "type": "DeFi lending",
@@ -272,80 +291,61 @@
       "spread_vs_3m": -0.5
     },
     {
-      "id": "mmf-swvxx",
-      "name": "Schwab Prime Advantage Money Fund (SWVXX)",
-      "type": "Money-market fund",
-      "apy": 3.7,
-      "yield_basis": "7-day yield",
-      "as_of": "2026-10-15",
-      "last_checked": "2026-10-16",
-      "source_kind": "manual",
-      "source_url": "https://www.schwabassetmanagement.com/products/swvxx",
-      "source_note": "Read from Schwab Asset Management fund page (as of 10/15/2026).",
-      "risk_tags": [
-        "fund risk",
-        "variable rate"
-      ],
-      "risk_note": "Prime money-market fund: holds some corporate paper, so slightly more credit risk than a government fund. Not FDIC-insured.",
-      "affiliate_url": "#",
-      "spread_vs_3m": -0.52
-    },
-    {
       "id": "mmf-snsxx",
       "name": "Schwab U.S. Treasury Money Fund (SNSXX)",
       "type": "Money-market fund",
-      "apy": 3.58,
+      "apy": 3.65,
       "yield_basis": "7-day yield",
-      "as_of": "2026-10-15",
-      "last_checked": "2026-10-16",
+      "as_of": "2026-10-26",
+      "last_checked": "2026-10-27",
       "source_kind": "manual",
       "source_url": "https://www.schwabassetmanagement.com/products/snsxx",
-      "source_note": "Read from Schwab Asset Management fund page (as of 10/15/2026).",
+      "source_note": "Read from Schwab Asset Management fund page (as of 10/26/2026; same with/without waivers).",
       "risk_tags": [
         "fund risk",
         "variable rate"
       ],
       "risk_note": "Holds only US Treasuries, so interest is generally state-tax exempt. Still a fund, not a deposit; yield changes daily.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.64
+      "spread_vs_3m": -0.57
     },
     {
       "id": "mmf-sprxx",
       "name": "Fidelity Money Market (SPRXX)",
       "type": "Money-market fund",
-      "apy": 3.57,
+      "apy": 3.62,
       "yield_basis": "7-day yield",
-      "as_of": "2026-10-14",
-      "last_checked": "2026-10-16",
+      "as_of": "2026-10-26",
+      "last_checked": "2026-10-27",
       "source_kind": "manual",
       "source_url": "https://fundresearch.fidelity.com/mutual-funds/summary/31617H201",
-      "source_note": "Read from Fidelity fund research page (as of 10/14/2026).",
+      "source_note": "Read from the data feed behind Fidelity's fund research page (yield7dayDaily, as of 10/26/2026).",
       "risk_tags": [
         "fund risk",
         "variable rate"
       ],
       "risk_note": "Prime money-market fund: holds some corporate paper, so slightly more credit risk than a government fund. Not FDIC-insured.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.65
+      "spread_vs_3m": -0.6
     },
     {
       "id": "mmf-spaxx",
       "name": "Fidelity Government Money Market (SPAXX)",
       "type": "Money-market fund",
-      "apy": 3.5,
+      "apy": 3.53,
       "yield_basis": "7-day yield",
-      "as_of": "2026-10-15",
-      "last_checked": "2026-10-16",
+      "as_of": "2026-10-26",
+      "last_checked": "2026-10-27",
       "source_kind": "manual",
       "source_url": "https://fundresearch.fidelity.com/mutual-funds/performance-and-risk/31617H102",
-      "source_note": "Read from Fidelity fund research page (as of 10/15/2026).",
+      "source_note": "Read from the data feed behind Fidelity's fund research page (yield7dayDaily, as of 10/26/2026).",
       "risk_tags": [
         "fund risk",
         "variable rate"
       ],
       "risk_note": "Government money-market fund and the default cash sweep at Fidelity. Not FDIC-insured; yield changes daily.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.72
+      "spread_vs_3m": -0.69
     },
     {
       "id": "compound-usdc-arbitrum",
