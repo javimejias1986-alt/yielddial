@@ -29,7 +29,7 @@
       const sp = r.spread_vs_3m;
       const spCls = sp == null ? "" : sp > 0.005 ? "pos" : sp < -0.005 ? "neg" : "";
       const spTxt = sp == null ? "n/a" : (sp > 0 ? "+" : sp < 0 ? "−" : "") + Math.abs(sp).toFixed(2) + " pp";
-      const aff = r.affiliate_url ? `<a href="${esc(r.affiliate_url)}" rel="sponsored noopener" data-placeholder="${r.affiliate_url === "#"}">Open account</a> · ` : "";
+      const aff = r.affiliate_url && r.affiliate_url !== "#" ? `<a href="${esc(r.affiliate_url)}" rel="sponsored noopener" data-placeholder="${r.affiliate_url === "#"}">Open account</a> · ` : "";
       const showAff = r.type === "Money-market fund" || r.type === "Exchange USDC rewards";
       return `<tr>
         <td class="opt" data-label="Option"><span class="name">${esc(r.name)}</span><span class="badge ${r.source_kind}">${r.source_kind}</span>${isStale(r) ? '<span class="badge stale">stale</span>' : ""}
@@ -111,11 +111,6 @@
     renderBanner(d); renderStats(d); renderCurve(d.curve); render();
     $("#gen").textContent = "Last refreshed " + new Date(d.generated_at).toLocaleString() + ".";
   }
-
-  $("#nl-form").addEventListener("submit", (e) => {
-    e.preventDefault();  // placeholder: no backend wired yet
-    $("#nl-msg").textContent = "Signup isn't live yet. Check back soon.";
-  });
 
   fetch("data/rates.json", { cache: "no-cache" })
     .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })

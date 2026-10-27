@@ -52,20 +52,25 @@
     <section class="signup" aria-labelledby="nl-h">
       <h2 id="nl-h">Get the weekly yield note</h2>
       <p class="muted">One short email: what moved, what changed on Fed days, no hype.</p>
-      <!-- PLACEHOLDER: wire this form to the newsletter provider once the owner has an account. -->
-      <form id="nl-form" action="#" method="post" novalidate>
+      <form id="nl-form" action="https://buttondown.com/api/emails/embed-subscribe/yielddial" method="post" target="_blank" rel="noopener">
         <label class="sr-only" for="nl-email">Email address</label>
-        <input id="nl-email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <input id="nl-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+        <input type="hidden" value="1" name="embed">
         <button type="submit">Subscribe</button>
+        <label class="consent" for="nl-consent">
+          <input id="nl-consent" type="checkbox" name="consent" value="yes" required>
+          <span>I agree to receive the weekly YieldDial email and accept the <a href="privacy.html">privacy notice</a>. / Acepto recibir el correo semanal de YieldDial y la <a href="privacy.html">política de privacidad</a>.</span>
+        </label>
       </form>
-      <p class="muted small" id="nl-msg" role="status"></p>
-    </section>
+      <p class="muted small">Opens in a new tab. Unsubscribe any time with one click from any email. / Se abre en una pestaña nueva. Puedes darte de baja en cualquier momento.</p>
+          </section>
   </main>
 
   <footer>
     <div class="wrap">
       <p><strong>Not financial advice.</strong> YieldDial is information only. Rates change, sometimes daily, and may differ from what you can actually get. Money-market funds, DeFi protocols and exchanges can lose money; a higher yield almost always means more risk. Do your own research.</p>
-      <p><strong>Affiliate disclosure:</strong> <span class="placeholder">[PLACEHOLDER: Some links on this site may be affiliate links. If you sign up through them, YieldDial may earn a commission at no cost to you. This does not change how options are ranked: the table is sorted by yield.]</span></p>
+      <p><strong>Paid links / Publicidad:</strong> There are no paid or affiliate links on YieldDial today. We may add paid links in future; they will be clearly labelled as publicidad, and payment will never change how options are ranked. / Hoy no hay enlaces de pago. Si los añadimos, se indicarán claramente como publicidad.</p>
+      <p class="small"><a href="disclaimer.html">Disclaimer</a> · <a href="privacy.html">Privacy notice</a></p>
       <p class="small">Data sources: US Treasury daily par yield curve; Aave v3 official API; Compound v3 contracts read on-chain; money-market and exchange rates entered manually from provider pages. <span id="gen"></span></p>
     </div>
   </footer>
