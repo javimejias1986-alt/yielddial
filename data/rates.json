@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-29T22:32:13Z",
+  "generated_at": "2026-10-29T22:47:45Z",
   "stale_after_hours": 36,
   "tbill_3m": 4.18,
   "sources": {
     "treasury": {
-      "fetched_at": "2026-10-28T22:45:52Z",
-      "as_of": "2026-10-28"
+      "fetched_at": "2026-10-29T22:47:45Z",
+      "as_of": "2026-10-29"
     },
     "aave": {
       "fetched_at": "2026-10-29T22:32:11Z"
@@ -14,15 +14,15 @@
       "fetched_at": "2026-10-29T22:32:13Z"
     },
     "manual": {
-      "fetched_at": "2026-10-29T22:32:13Z"
+      "fetched_at": "2026-10-29T22:47:45Z"
     }
   },
   "curve": {
-    "as_of": "2026-10-28",
+    "as_of": "2026-10-29",
     "points": [
       {
         "label": "1M",
-        "yield": 4.07
+        "yield": 4.06
       },
       {
         "label": "3M",
@@ -30,27 +30,27 @@
       },
       {
         "label": "6M",
-        "yield": 4.32
+        "yield": 4.28
       },
       {
         "label": "1Y",
-        "yield": 4.47
+        "yield": 4.42
       },
       {
         "label": "2Y",
-        "yield": 4.67
+        "yield": 4.61
       },
       {
         "label": "5Y",
-        "yield": 4.85
+        "yield": 4.78
       },
       {
         "label": "10Y",
-        "yield": 5.05
+        "yield": 4.98
       },
       {
         "label": "30Y",
-        "yield": 5.37
+        "yield": 5.32
       }
     ]
   },
@@ -131,10 +131,10 @@
       "id": "tsy-1y",
       "name": "US Treasury 1-year",
       "type": "Treasury",
-      "apy": 4.47,
+      "apy": 4.42,
       "yield_basis": "Par yield (bond-equivalent) from Treasury daily curve",
-      "as_of": "2026-10-28",
-      "last_checked": "2026-10-28T22:45:52Z",
+      "as_of": "2026-10-29",
+      "last_checked": "2026-10-29T22:47:45Z",
       "source_kind": "live",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "risk_tags": [
@@ -142,16 +142,16 @@
       ],
       "risk_note": "Backed by the full faith and credit of the US government. Rate is locked if held to maturity; selling early can gain or lose. Interest is exempt from state income tax.",
       "affiliate_url": "#",
-      "spread_vs_3m": 0.29
+      "spread_vs_3m": 0.24
     },
     {
       "id": "tsy-6m",
       "name": "US Treasury 6-month",
       "type": "Treasury",
-      "apy": 4.32,
+      "apy": 4.28,
       "yield_basis": "Par yield (bond-equivalent) from Treasury daily curve",
-      "as_of": "2026-10-28",
-      "last_checked": "2026-10-28T22:45:52Z",
+      "as_of": "2026-10-29",
+      "last_checked": "2026-10-29T22:47:45Z",
       "source_kind": "live",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "risk_tags": [
@@ -159,7 +159,7 @@
       ],
       "risk_note": "Backed by the full faith and credit of the US government. Rate is locked if held to maturity; selling early can gain or lose. Interest is exempt from state income tax.",
       "affiliate_url": "#",
-      "spread_vs_3m": 0.14
+      "spread_vs_3m": 0.1
     },
     {
       "id": "tsy-3m",
@@ -167,8 +167,8 @@
       "type": "Treasury",
       "apy": 4.18,
       "yield_basis": "Par yield (bond-equivalent) from Treasury daily curve",
-      "as_of": "2026-10-28",
-      "last_checked": "2026-10-28T22:45:52Z",
+      "as_of": "2026-10-29",
+      "last_checked": "2026-10-29T22:47:45Z",
       "source_kind": "live",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "risk_tags": [
@@ -182,10 +182,10 @@
       "id": "tsy-1m",
       "name": "US Treasury 1-month",
       "type": "Treasury",
-      "apy": 4.07,
+      "apy": 4.06,
       "yield_basis": "Par yield (bond-equivalent) from Treasury daily curve",
-      "as_of": "2026-10-28",
-      "last_checked": "2026-10-28T22:45:52Z",
+      "as_of": "2026-10-29",
+      "last_checked": "2026-10-29T22:47:45Z",
       "source_kind": "live",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "risk_tags": [
@@ -194,7 +194,7 @@
       ],
       "risk_note": "Backed by the full faith and credit of the US government. Rate is locked if held to maturity; selling early can gain or lose. Interest is exempt from state income tax.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.11
+      "spread_vs_3m": -0.12
     },
     {
       "id": "cex-kraken-plus",
@@ -403,9 +403,5 @@
       "spread_vs_3m": -2.18
     }
   ],
-  "errors": [
-    "aave Ethereum: USDC reserve is frozen or paused",
-    "aave Base: USDC reserve is frozen or paused",
-    "aave Arbitrum: USDC reserve is frozen or paused"
-  ]
+  "errors": []
 }
