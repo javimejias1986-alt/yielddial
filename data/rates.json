@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-30T22:30:07Z",
+  "generated_at": "2026-10-30T22:44:36Z",
   "stale_after_hours": 36,
-  "tbill_3m": 4.18,
+  "tbill_3m": 4.16,
   "sources": {
     "treasury": {
-      "fetched_at": "2026-10-29T22:47:45Z",
-      "as_of": "2026-10-29"
+      "fetched_at": "2026-10-30T22:44:36Z",
+      "as_of": "2026-10-30"
     },
     "aave": {
       "fetched_at": "2026-10-30T22:30:06Z"
@@ -14,11 +14,11 @@
       "fetched_at": "2026-10-30T22:30:07Z"
     },
     "manual": {
-      "fetched_at": "2026-10-30T22:30:07Z"
+      "fetched_at": "2026-10-30T22:44:36Z"
     }
   },
   "curve": {
-    "as_of": "2026-10-29",
+    "as_of": "2026-10-30",
     "points": [
       {
         "label": "1M",
@@ -26,31 +26,31 @@
       },
       {
         "label": "3M",
-        "yield": 4.18
+        "yield": 4.16
       },
       {
         "label": "6M",
-        "yield": 4.28
+        "yield": 4.25
       },
       {
         "label": "1Y",
-        "yield": 4.42
+        "yield": 4.36
       },
       {
         "label": "2Y",
-        "yield": 4.61
+        "yield": 4.56
       },
       {
         "label": "5Y",
-        "yield": 4.78
+        "yield": 4.71
       },
       {
         "label": "10Y",
-        "yield": 4.98
+        "yield": 4.94
       },
       {
         "label": "30Y",
-        "yield": 5.32
+        "yield": 5.31
       }
     ]
   },
@@ -71,7 +71,7 @@
       ],
       "risk_note": "Lending to onchain borrowers via audited smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
-      "spread_vs_3m": 4.98
+      "spread_vs_3m": 5.0
     },
     {
       "id": "compound-usdc-base",
@@ -89,7 +89,7 @@
       ],
       "risk_note": "Lending to onchain borrowers via Compound v3 smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
-      "spread_vs_3m": 4.92
+      "spread_vs_3m": 4.94
     },
     {
       "id": "aave-usdc-base",
@@ -107,7 +107,7 @@
       ],
       "risk_note": "Lending to onchain borrowers via audited smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
-      "spread_vs_3m": 4.23
+      "spread_vs_3m": 4.25
     },
     {
       "id": "aave-usdc-ethereum",
@@ -125,7 +125,7 @@
       ],
       "risk_note": "Lending to onchain borrowers via audited smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
-      "spread_vs_3m": 0.89
+      "spread_vs_3m": 0.91
     },
     {
       "id": "compound-usdc-ethereum",
@@ -143,16 +143,16 @@
       ],
       "risk_note": "Lending to onchain borrowers via Compound v3 smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
-      "spread_vs_3m": 0.42
+      "spread_vs_3m": 0.44
     },
     {
       "id": "tsy-1y",
       "name": "US Treasury 1-year",
       "type": "Treasury",
-      "apy": 4.42,
+      "apy": 4.36,
       "yield_basis": "Par yield (bond-equivalent) from Treasury daily curve",
-      "as_of": "2026-10-29",
-      "last_checked": "2026-10-29T22:47:45Z",
+      "as_of": "2026-10-30",
+      "last_checked": "2026-10-30T22:44:36Z",
       "source_kind": "live",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "risk_tags": [
@@ -160,16 +160,16 @@
       ],
       "risk_note": "Backed by the full faith and credit of the US government. Rate is locked if held to maturity; selling early can gain or lose. Interest is exempt from state income tax.",
       "affiliate_url": "#",
-      "spread_vs_3m": 0.24
+      "spread_vs_3m": 0.2
     },
     {
       "id": "tsy-6m",
       "name": "US Treasury 6-month",
       "type": "Treasury",
-      "apy": 4.28,
+      "apy": 4.25,
       "yield_basis": "Par yield (bond-equivalent) from Treasury daily curve",
-      "as_of": "2026-10-29",
-      "last_checked": "2026-10-29T22:47:45Z",
+      "as_of": "2026-10-30",
+      "last_checked": "2026-10-30T22:44:36Z",
       "source_kind": "live",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "risk_tags": [
@@ -177,16 +177,16 @@
       ],
       "risk_note": "Backed by the full faith and credit of the US government. Rate is locked if held to maturity; selling early can gain or lose. Interest is exempt from state income tax.",
       "affiliate_url": "#",
-      "spread_vs_3m": 0.1
+      "spread_vs_3m": 0.09
     },
     {
       "id": "tsy-3m",
       "name": "US Treasury 3-month",
       "type": "Treasury",
-      "apy": 4.18,
+      "apy": 4.16,
       "yield_basis": "Par yield (bond-equivalent) from Treasury daily curve",
-      "as_of": "2026-10-29",
-      "last_checked": "2026-10-29T22:47:45Z",
+      "as_of": "2026-10-30",
+      "last_checked": "2026-10-30T22:44:36Z",
       "source_kind": "live",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "risk_tags": [
@@ -202,8 +202,8 @@
       "type": "Treasury",
       "apy": 4.06,
       "yield_basis": "Par yield (bond-equivalent) from Treasury daily curve",
-      "as_of": "2026-10-29",
-      "last_checked": "2026-10-29T22:47:45Z",
+      "as_of": "2026-10-30",
+      "last_checked": "2026-10-30T22:44:36Z",
       "source_kind": "live",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "risk_tags": [
@@ -212,7 +212,7 @@
       ],
       "risk_note": "Backed by the full faith and credit of the US government. Rate is locked if held to maturity; selling early can gain or lose. Interest is exempt from state income tax.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.12
+      "spread_vs_3m": -0.1
     },
     {
       "id": "cex-kraken-plus",
@@ -231,7 +231,7 @@
       ],
       "risk_note": "Your USDC sits with Kraken. Rate is an 'up to' figure, variable, and needs a Kraken+ subscription.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.18
+      "spread_vs_3m": -0.16
     },
     {
       "id": "mmf-vmfxx",
@@ -250,7 +250,7 @@
       ],
       "risk_note": "Government money-market fund. Not FDIC-insured and not a bank deposit; yield moves daily with short-term rates.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.32
+      "spread_vs_3m": -0.3
     },
     {
       "id": "cex-coinbase-one",
@@ -269,7 +269,7 @@
       ],
       "risk_note": "Your USDC sits with Coinbase, not in your own wallet. You rely on the company staying solvent; the rate is set by Coinbase and can change. Membership fee reduces the net yield.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.43
+      "spread_vs_3m": -0.41
     },
     {
       "id": "mmf-swvxx",
@@ -288,7 +288,7 @@
       ],
       "risk_note": "Prime money-market fund: holds some corporate paper, so slightly more credit risk than a government fund. Not FDIC-insured.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.44
+      "spread_vs_3m": -0.42
     },
     {
       "id": "mmf-snsxx",
@@ -307,7 +307,7 @@
       ],
       "risk_note": "Holds only US Treasuries, so interest is generally state-tax exempt. Still a fund, not a deposit; yield changes daily.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.53
+      "spread_vs_3m": -0.51
     },
     {
       "id": "mmf-sprxx",
@@ -326,7 +326,7 @@
       ],
       "risk_note": "Prime money-market fund: holds some corporate paper, so slightly more credit risk than a government fund. Not FDIC-insured.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.56
+      "spread_vs_3m": -0.54
     },
     {
       "id": "mmf-spaxx",
@@ -345,7 +345,7 @@
       ],
       "risk_note": "Government money-market fund and the default cash sweep at Fidelity. Not FDIC-insured; yield changes daily.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.65
+      "spread_vs_3m": -0.63
     },
     {
       "id": "compound-usdc-arbitrum",
@@ -363,7 +363,7 @@
       ],
       "risk_note": "Lending to onchain borrowers via Compound v3 smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
-      "spread_vs_3m": -0.96
+      "spread_vs_3m": -0.94
     },
     {
       "id": "aave-usdc-arbitrum",
@@ -381,7 +381,7 @@
       ],
       "risk_note": "Lending to onchain borrowers via audited smart contracts; no deposit insurance. Risks: contract bugs, oracle or liquidation problems, USDC depeg. Rate moves with utilisation.",
       "affiliate_url": "#",
-      "spread_vs_3m": -1.53
+      "spread_vs_3m": -1.51
     },
     {
       "id": "cex-kraken-free",
@@ -400,7 +400,7 @@
       ],
       "risk_note": "Your USDC sits with Kraken. Rate is an 'up to' figure and can change at any time.",
       "affiliate_url": "#",
-      "spread_vs_3m": -2.18
+      "spread_vs_3m": -2.16
     }
   ],
   "errors": []
