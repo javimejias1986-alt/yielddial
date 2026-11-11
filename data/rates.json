@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-11T22:44:20Z",
+  "generated_at": "2026-11-11T22:57:40Z",
   "stale_after_hours": 36,
   "tbill_3m": 4.3,
   "sources": {
     "treasury": {
-      "fetched_at": "2026-11-10T22:48:46Z",
+      "fetched_at": "2026-11-11T22:57:40Z",
       "as_of": "2026-11-10"
     },
     "aave": {
@@ -14,7 +14,7 @@
       "fetched_at": "2026-11-11T22:44:20Z"
     },
     "manual": {
-      "fetched_at": "2026-11-11T22:44:20Z"
+      "fetched_at": "2026-11-11T22:57:40Z"
     }
   },
   "curve": {
@@ -152,7 +152,7 @@
       "apy": 4.56,
       "yield_basis": "Par yield (bond-equivalent) from Treasury daily curve",
       "as_of": "2026-11-10",
-      "last_checked": "2026-11-10T22:48:46Z",
+      "last_checked": "2026-11-11T22:57:40Z",
       "source_kind": "live",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "risk_tags": [
@@ -169,7 +169,7 @@
       "apy": 4.38,
       "yield_basis": "Par yield (bond-equivalent) from Treasury daily curve",
       "as_of": "2026-11-10",
-      "last_checked": "2026-11-10T22:48:46Z",
+      "last_checked": "2026-11-11T22:57:40Z",
       "source_kind": "live",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "risk_tags": [
@@ -186,7 +186,7 @@
       "apy": 4.3,
       "yield_basis": "Par yield (bond-equivalent) from Treasury daily curve",
       "as_of": "2026-11-10",
-      "last_checked": "2026-11-10T22:48:46Z",
+      "last_checked": "2026-11-11T22:57:40Z",
       "source_kind": "live",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "risk_tags": [
@@ -203,7 +203,7 @@
       "apy": 4.05,
       "yield_basis": "Par yield (bond-equivalent) from Treasury daily curve",
       "as_of": "2026-11-10",
-      "last_checked": "2026-11-10T22:48:46Z",
+      "last_checked": "2026-11-11T22:57:40Z",
       "source_kind": "live",
       "source_url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve",
       "risk_tags": [
